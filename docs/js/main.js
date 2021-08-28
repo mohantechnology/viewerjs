@@ -59,7 +59,16 @@ window.onload = function () {
     },
     stop: function (e) {
       console.log(e.type);
-    }
+    },
+    onImgPlaying: ( img_elem ,index ) => { 
+      console.log( "on_img_playing called") ;  
+      console.log( img_elem ) ;  
+      console.log( index ) ;  
+            return true; 
+      },
+  runAfterPlay : true 
+  //   if 'runAfterPlay' set to true then 'onImgPlaying' event is called after calling play() function 
+  // else by default  it  is called before play() function 
   };
   var viewer = new Viewer(pictures, options);
 
